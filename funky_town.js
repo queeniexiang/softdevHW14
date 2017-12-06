@@ -10,7 +10,7 @@ HW15 -- Sequential Progression
 var students=["Abigail", "Bob", "Claire", "Daniel", "Eve", "Frank"]; 
 
 var fibonacci = function(n) {
-    if (n == 1) {
+    if (n == 0) {
         return 0;
     }
     if (n < 2) {
