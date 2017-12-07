@@ -38,8 +38,12 @@ var random_student_selector = function() {
     return students[index];
 };
 
+var buttonCallback = function(e) {
+    console.log("\n\nhere comes e...");
+    console.log(e);
+    console.log("\n\nhere comes 'this'...");
+    console.log(this);
+};
 
-
-
-    
-
+var b = document.getElementById("b");
+b.addEventListener("click", buttonCallback);
