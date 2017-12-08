@@ -10,7 +10,7 @@ HW15 -- Sequential Progression PHASE II
 var students=["Abigail", "Bob", "Claire", "Daniel", "Eve", "Frank"]; 
 
 var fibonacci = function(n) {
-    
+
     if (n == 0) {
         return 0;
     }
@@ -34,8 +34,8 @@ var gcd = function(a, b) {
 
 var random_student_selector = function() {
     var index = Math.random() * students.length 
-    //Floor rounds index down to the previous, lowest integer 
-    index = Math.floor(index);
+        //Floor rounds index down to the previous, lowest integer 
+        index = Math.floor(index);
     return students[index];
 };
 
@@ -54,13 +54,19 @@ var buttonCallbackGCD2 = function() {
     return console.log(gcd(12, 96));
 };
 
+// If Random student button is clicked, call random student selector and print to console
+var buttonCallbackRand = function() {
+    return console.log(random_student_selector());
+};
 
 var b = document.getElementById("fib");
 b.addEventListener("click", buttonCallbackFIB);
 
-b = document.getElementById("gcd1");
-b.addEventListener("click", buttonCallbackGCD);
+var gcd1 = document.getElementById("gcd1");
+gcd1.addEventListener("click", buttonCallbackGCD);
 
-b = document.getElementById("gcd2");
-b.addEventListener("click", buttonCallbackGCD2);
+var gcd2 = document.getElementById("gcd2");
+gcd2.addEventListener("click", buttonCallbackGCD2);
 
+var rand = document.getElementById("rand");
+rand.addEventListener("click", buttonCallbackRand);
