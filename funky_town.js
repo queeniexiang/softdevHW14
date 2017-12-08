@@ -2,14 +2,15 @@
 Team HQ
 Helen Ye and Queenie Xiang
 Softdev pd7 
-HW15 -- Sequential Progression
-2017-12-06
+HW15 -- Sequential Progression PHASE II
+2017-12-07
 */
 
 //List of students 
 var students=["Abigail", "Bob", "Claire", "Daniel", "Eve", "Frank"]; 
 
 var fibonacci = function(n) {
+    
     if (n == 0) {
         return 0;
     }
@@ -38,12 +39,28 @@ var random_student_selector = function() {
     return students[index];
 };
 
-var buttonCallback = function(e) {
-    console.log("\n\nhere comes e...");
-    console.log(e);
-    console.log("\n\nhere comes 'this'...");
-    console.log(this);
+//If Fibonnaci button is clicked, fibonacci function will be called to find the 4th term in the sequence
+var buttonCallbackFIB = function() {
+    return console.log(fibonacci(4));
 };
 
-var b = document.getElementById("b");
-b.addEventListener("click", buttonCallback);
+//If GCD: 4,2 button is clicked, gcd function will be called to find the gcd of 4,2
+var buttonCallbackGCD = function() {
+    return console.log(gcd(4,2));
+};
+
+//If GCD: 12,96 button is clicked, gcd function will be called to find the gcd of 12,96
+var buttonCallbackGCD2 = function() {
+    return console.log(gcd(12, 96));
+};
+
+
+var b = document.getElementById("fib");
+b.addEventListener("click", buttonCallbackFIB);
+
+b = document.getElementById("gcd1");
+b.addEventListener("click", buttonCallbackGCD);
+
+b = document.getElementById("gcd2");
+b.addEventListener("click", buttonCallbackGCD2);
+
